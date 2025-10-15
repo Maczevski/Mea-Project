@@ -1,18 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mea - Registro Rápido</title>
-     <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/Mea-Project/css/style.css">
-     <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
-     
+    <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Mea-Project/css/style.css">
+    <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <div class="container">
-       
+        <div class="col-12">
+            <div class="row header">
+                    <img class="header-img" src="/Mea-Project/assets/img/Mea-logo.png" alt="Mea">
+            </div>
+        </div>
+          <div class="row text-center pt-3">
+            <h2 class="primary-title p-2">REGISTRO RÁPIDO</h2>
+            <h3 class="secondary-title" style="font-size: 18px; letter-spacing: 2px;">Como está se sentindo?</h2>
+        </div>
     </div>
+
+     <div id="feelAccordion" class="mb-3 p-2">
+
+      <!-- POSITIVE -->
+      <div class="mb-2">
+        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
+             data-bs-toggle="collapse" data-bs-target="#positiveContent" aria-expanded="false" aria-controls="positiveContent">
+          <span>POSITIVE</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <div id="positiveContent" class="collapse" data-bs-parent="#feelAccordion">
+          <div class="group-content px-3 py-2">
+            <button class="emotion-btn" data-value="happy"><i data-lucide="smile"></i><span>Happy</span></button>
+            <button class="emotion-btn" data-value="inlove"><i data-lucide="heart"></i><span>In Love</span></button>
+            <button class="emotion-btn" data-value="excited"><i data-lucide="sparkles"></i><span>Excited</span></button>
+            <button class="emotion-btn" data-value="grateful"><i data-lucide="sun"></i><span>Grateful</span></button>
+
+            <button class="emotion-btn" data-value="confident"><i data-lucide="sunglasses"></i><span>Confident</span></button>
+            <button class="emotion-btn" data-value="calm"><i data-lucide="feather"></i><span>Calm</span></button>
+            <button class="emotion-btn" data-value="relieved"><i data-lucide="wind"></i><span>Relieved</span></button>
+            <button class="emotion-btn" data-value="satisfied"><i data-lucide="smile-plus"></i><span>Satisfied</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEUTRAL -->
+      <div class="mb-2">
+        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
+             data-bs-toggle="collapse" data-bs-target="#neutralContent" aria-expanded="false" aria-controls="neutralContent">
+          <span>NEUTRAL</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <div id="neutralContent" class="collapse" data-bs-parent="#feelAccordion">
+          <div class="group-content px-3 py-2">
+            <button class="emotion-btn" data-value="indifferent"><i data-lucide="meh"></i><span>Indifferent</span></button>
+            <button class="emotion-btn" data-value="uncertain"><i data-lucide="help-circle"></i><span>Uncertain</span></button>
+            <button class="emotion-btn" data-value="pensive"><i data-lucide="ellipsis"></i><span>Pensive</span></button>
+            <!-- placeholders will fill if needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- NEGATIVE -->
+      <div class="mb-2">
+        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
+             data-bs-toggle="collapse" data-bs-target="#negativeContent" aria-expanded="false" aria-controls="negativeContent">
+          <span>NEGATIVE</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <div id="negativeContent" class="collapse" data-bs-parent="#feelAccordion">
+          <div class="group-content px-3 py-2">
+            <button class="emotion-btn" data-value="sad"><i data-lucide="frown"></i><span>Sad</span></button>
+            <button class="emotion-btn" data-value="angry"><i data-lucide="angry"></i><span>Angry</span></button>
+            <button class="emotion-btn" data-value="anxious"><i data-lucide="alert-triangle"></i><span>Anxious</span></button>
+            <button class="emotion-btn" data-value="disappointed"><i data-lucide="x-circle"></i><span>Disappointed</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /accordion -->
+
+    <!-- SLIDER -->
+    <div class="slider-container text-center mt-3">
+      <label for="intensity" class="fw-semibold d-block mb-2">How strong is the feeling?</label>
+      <input type="range" id="intensity" class="form-range mx-auto" min="0" max="9" step="1" value="0" style="max-width: 360px;">
+      <div id="intensityLabel" class="slider-label mt-2">Muito leve</div>
+    </div>
+  </main>
+
+  <!-- Bootstrap (JS bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Seu JS -->
+  <script src="js/scripts.js"></script>
+
     
+
+
+    <nav class="navbar fixed-bottom border-top pt-2 pb-2">
+        <div class="container d-flex justify-content-around">
+            <a href="/Mea-Project/home.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Home.png" alt="">
+            </a>
+            <a href="/Mea-Project/free-canvas.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Canvas-icon.png" alt="">
+            </a>
+            <a href="/Mea-Project/dashboard.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Reports.png" alt="">
+            </a>
+            <a href="/Mea-Project/settings.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Settings.png" alt="">
+            </a>
+        </div>
+    </nav>
+
 </body>
+
 </html>
+
+
+
+
+

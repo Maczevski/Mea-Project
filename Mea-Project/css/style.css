@@ -7,8 +7,7 @@
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ExtraBold.ttf")
-    format("truetype");
+  src: url("../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -37,10 +36,15 @@
   --text-color: #333;
 }
 
+canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
+
 body {
   background-color: var(--bege);
 }
-a{
+a {
   text-decoration: none;
 }
 
@@ -84,43 +88,45 @@ a{
   margin: 20px 0 20px 0;
 }
 
-.header{
+.header {
   max-height: 80px;
 }
 
-.header-img{
+.header-img {
+  width: 100%; /* A imagem tentará ocupar 100% da largura do contêiner */
+  height: 100%;
   max-height: 60px;
+  object-fit: contain;
 }
 
-.home-title{
+.home-title {
   font-family: "Quicksand";
   font-size: 32px;
 }
 
-.home-btn-icon{
+.home-btn-icon {
   max-width: 60px;
 }
 
-.free-canvas-link{
+.free-canvas-link {
   background-color: #08364b;
   min-width: 300px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px grey;
 }
 
-.reports-link{
+.reports-link {
   background-color: #ff914b;
   min-width: 300px;
   border-radius: 30px;
-    box-shadow: 0px 5px 5px grey;
-
+  box-shadow: 0px 5px 5px grey;
 }
 
-.canvas-btn-home{
+.canvas-btn-home {
   max-width: 80px;
 }
 
-.canvas-btn-title{
+.canvas-btn-title {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 24px;
@@ -128,14 +134,14 @@ a{
   padding-top: 8px;
 }
 
-.secondary-btn-title{
+.secondary-btn-title {
   color: #ffffff;
   font-family: "Quicksand";
   font-size: 18px;
   font-weight: 600;
 }
 
-.bold-btn-title{
+.bold-btn-title {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 26px;
@@ -145,7 +151,7 @@ a{
   line-height: 28px;
 }
 
-.quick-record-link{
+.quick-record-link {
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -154,9 +160,8 @@ a{
   max-width: 100px;
   border-radius: 20px;
   box-shadow: 0px 5px 5px grey;
-
 }
-.detailed-record-link{
+.detailed-record-link {
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -166,14 +171,13 @@ a{
   border-radius: 20px;
 }
 
-.btn-title{
+.btn-title {
   padding: 0;
   font-family: "Quicksand";
   font-size: 20px;
   font-weight: 900;
   line-height: 28px;
 }
-
 
 .btn-primary {
   font-family: "Montserrat";
@@ -192,13 +196,13 @@ a{
   background-color: #b5ce9f;
 }
 
-.bar-btn{
+.bar-btn {
   max-width: 40px;
 }
 
-.navbar{
-    box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.541);
-    background-color: #f7e4be;
+.navbar {
+  box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.541);
+  background-color: #f7e4be;
 }
 
 @media screen and (max-width: 700px) {
@@ -207,9 +211,214 @@ a{
     margin: 80px 0 80px 0;
   }
 
-  .welcome-mea{
+  .welcome-mea {
     padding-top: 130px;
     justify-content: center;
     text-align: center;
+  }
+
+  .header-img {
+    width: 100%; /* A imagem tentará ocupar 100% da largura do contêiner */
+    height: 100%;
+    object-fit: contain;
+  }
 }
+
+/* Canvas */
+
+/* style.css - paleta e layout inspirado na imagem */
+:root {
+  --beige-1: #fff4e0;
+  --beige-2: #fff7e6;
+  --border: #efe0c7;
+  --icon: #111;
+}
+
+.canvas-body {
+  background: #f5f3f0;
+}
+
+/* container similar ao mockup */
+.app-shell {
+  max-width: 380px;
+}
+
+/* topo e rodapé */
+.topbar {
+  color: var(--icon);
+}
+.topbar .btn-transparent {
+  background: transparent;
+  border: 0;
+  color: var(--icon);
+}
+.bottombar .btn-transparent {
+  background: transparent;
+  border: 0;
+  color: var(--icon);
+}
+
+#canvasFrame {
+  box-shadow: inset 0 10px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* elementos posicionáveis dentro do wrapper */
+.canvas-item {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+
+/* handle de redimensionamento */
+.canvas-item .resize-handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 1px solid #ccc;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 2px;
+  cursor: se-resize;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* cartão/nota */
+.item-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #eee;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  min-width: 120px;
+}
+
+/* texto editável */
+.canvas-text {
+  padding: 6px 8px;
+  min-width: 80px;
+  min-height: 24px;
+  outline: none;
+  white-space: pre-wrap;
+}
+
+/* icones tamanho e cor */
+.fa-2x {
+  color: var(--icon);
+}
+
+/* mobile */
+@media (max-width: 420px) {
+  .app-shell {
+    width: 340px;
+  }
+}
+
+
+/* Resgistros */
+
+/* Header do "dropdown" que usa collapse do Bootstrap */
+.group-header {
+  background: var(--light-bege);
+  border: 2px solid var(--dark-blue);
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--dark-blue);
+  user-select: none;
+}
+
+.group-header i {
+  stroke: var(--dark-blue);
+}
+
+/* Conteúdo que abre: usamos grid de 4 colunas */
+.group-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  align-items: start;
+  justify-items: start; /* alinha sempre ao início da célula */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background: white;
+  border-left: 2px solid var(--dark-blue);
+  border-right: 2px solid var(--dark-blue);
+  border-bottom: 2px solid var(--dark-blue);
+  border-radius: 0 0 12px 12px;
+}
+
+/* Botões de emoção (ícone em cima, texto embaixo) */
+.emotion-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid var(--dark-blue);
+  background: white;
+  color: var(--dark-blue);
+  width: 68px;
+  min-height: 68px;
+  padding: 6px 4px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.08s;
+}
+
+.emotion-btn i {
+  width: 20px;
+  height: 20px;
+  stroke: var(--dark-blue);
+}
+
+/* Placeholder para manter posições (invisível, mesmo tamanho) */
+.group-content .placeholder {
+  width: 68px;
+  min-height: 68px;
+  visibility: hidden;
+}
+
+/* Estado ativo */
+.emotion-btn.active {
+  background: var(--dark-blue);
+  color: var(--bege);
+  border-color: var(--dark-blue);
+}
+
+.emotion-btn.active i {
+  stroke: var(--bege);
+}
+
+/* Slider visual */
+.slider-container .form-range {
+  accent-color: var(--dark-blue);
+  height: 0.5rem;
+}
+
+/* Label do slider */
+.slider-label {
+  color: var(--dark-blue);
+  font-weight: 600;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+/* Label quando "ativo" (ex.: valor > 4) */
+.slider-label.active {
+  background: var(--dark-blue);
+  color: var(--bege);
+}
+
+/* Responsividade: reduzir tamanho no mobile */
+@media (max-width: 420px) {
+  .group-content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.45rem;
+  }
+  .emotion-btn { width: 62px; min-height: 62px; font-size: 11px; }
+  .emotion-btn i { width: 18px; height: 18px; }
+  .slider-container .form-range { max-width: 280px; }
 }
