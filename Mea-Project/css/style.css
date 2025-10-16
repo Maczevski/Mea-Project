@@ -315,7 +315,6 @@ a {
   }
 }
 
-
 /* Resgistros */
 
 /* Header do "dropdown" que usa collapse do Bootstrap */
@@ -332,8 +331,9 @@ a {
   stroke: var(--dark-blue);
 }
 
-/* Conteúdo que abre: usamos grid de 4 colunas */
 .group-content {
+  margin-top: -10px;
+  padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.6rem;
@@ -341,7 +341,7 @@ a {
   justify-items: start; /* alinha sempre ao início da célula */
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  background: white;
+  background: var(--light-bege);
   border-left: 2px solid var(--dark-blue);
   border-right: 2px solid var(--dark-blue);
   border-bottom: 2px solid var(--dark-blue);
@@ -350,27 +350,33 @@ a {
 
 /* Botões de emoção (ícone em cima, texto embaixo) */
 .emotion-btn {
+  justify-content: s;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  border: 2px solid var(--dark-blue);
+  border: 3px solid var(--dark-blue);
   background: white;
   color: var(--dark-blue);
-  width: 68px;
+  min-width: 68px;
   min-height: 68px;
   padding: 6px 4px;
   border-radius: 10px;
   font-size: 12px;
   line-height: 1;
   text-align: center;
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.08s;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease,
+    transform 0.08s;
 }
 
 .emotion-btn i {
-  width: 20px;
-  height: 20px;
   stroke: var(--dark-blue);
+}
+
+.emotion-txt {
+  font-size: 14px;
+  font-family: "Quicksand";
+  font-weight: 900;
 }
 
 /* Placeholder para manter posições (invisível, mesmo tamanho) */
@@ -412,13 +418,97 @@ a {
   color: var(--bege);
 }
 
+.ui-icon {
+  font-size: 25px;
+}
+
+.emotion-icon {
+  font-size: 35px;
+}
+
+/* Reset de estilos nativos */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4caf50 0%, #ccc 0%);
+  outline: none;
+  transition: background 450ms ease-in;
+}
+
+/* Thumb (indicador deslizante) - Webkit */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #08364b;
+  cursor: pointer;
+  border: none;
+  margin-top: -6px; /* Alinha verticalmente com a track */
+}
+
+/* Firefox Thumb */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-color: #08364b;
+  border-width: 2px;
+  background: #08364b;
+  cursor: pointer;
+  border: none;
+}
+
+/* Firefox Track */
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 5px;
+  background: #ccc;
+}
+
+.note-input {
+  padding: 15px;
+  border-radius: 15px;
+  outline: none;
+  border: solid;
+  border-color: #08364bbb;
+  border-width: 2px;
+}
+
+.btn-save {
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 24px;
+  letter-spacing: 10px;
+  color: #ffffff;
+  padding: 15px 50px 15px 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff914b;
+  box-shadow: 0px 5px 5px grey;
+  width: 100%;
+  margin: 20px 0 100px 0;
+}
+
+.btn-save:hover {
+  background-color: #b5ce9f;
+}
+
 /* Responsividade: reduzir tamanho no mobile */
 @media (max-width: 420px) {
   .group-content {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.45rem;
   }
-  .emotion-btn { width: 62px; min-height: 62px; font-size: 11px; }
-  .emotion-btn i { width: 18px; height: 18px; }
-  .slider-container .form-range { max-width: 280px; }
+  .emotion-btn {
+    width: 62px;
+    min-height: 62px;
+    font-size: 11px;
+  }
+  .slider-container .form-range {
+    max-width: 280px;
+  }
 }

@@ -2,127 +2,241 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mea - Registro Rápido</title>
-    <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Mea-Project/css/style.css">
-    <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mea - Registro Rápido</title>
+  <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Mea-Project/css/style.css">
+  <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="col-12">
-            <div class="row header">
-                    <img class="header-img" src="/Mea-Project/assets/img/Mea-logo.png" alt="Mea">
+  <div class="container">
+    <div class="col-12">
+      <div class="row header">
+        <img class="header-img" src="/Mea-Project/assets/img/Mea-logo.png" alt="Mea">
+      </div>
+    </div>
+    <div class="row text-center pt-3">
+      <h2 class="primary-title p-2">REGISTRO RÁPIDO</h2>
+      <h3 class="secondary-title" style="font-size: 18px; letter-spacing: 2px;">Como está se sentindo?</h3>
+    </div>
+  </div>
+
+  <div id="feelAccordion" class="mb-3 p-2">
+
+    <!-- POSITIVO -->
+    <div class="mb-2">
+      <div class="group-header d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse"
+        data-bs-target="#positiveContent" aria-expanded="false" aria-controls="positiveContent">
+        <span class="secondary-title" style="letter-spacing: 2px;">POSITIVE</span>
+        <i class="fi fi-rr-angle-circle-down ui-icon"></i>
+      </div>
+      <div id="positiveContent" class="collapse" data-bs-parent="#feelAccordion">
+        <div class="group-content px-3 py-2">
+          <button class="emotion-btn" data-value="happy">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <i class="fi fi-rr-grin-beam emotion-icon inner"></i>
+              <span class="emotion-txt">Feliz</span>
             </div>
+          </button>
+          <button class="emotion-btn" data-value="in-love">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-grin-hearts emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Apaixonado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="exited">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-grin-stars emotion-icon"></i>
+              <span class="emotion-txt">Animado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="grateful">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-smile-hearts emotion-icon"></i>
+              <span class="emotion-txt">Grato</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="confident">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-sunglasses emotion-icon"></i>
+              <span class="emotion-txt">Confiante</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="calm">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-laugh emotion-icon"></i>
+              <span class="emotion-txt">Calmo</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="relieved">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-relieved emotion-icon"></i>
+              <span class="emotion-txt">Aliviado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="satisfied">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-awesome emotion-icon"></i>
+              <span class="emotion-txt">Satisfeito</span>
+            </div>
+          </button>
         </div>
-          <div class="row text-center pt-3">
-            <h2 class="primary-title p-2">REGISTRO RÁPIDO</h2>
-            <h3 class="secondary-title" style="font-size: 18px; letter-spacing: 2px;">Como está se sentindo?</h2>
-        </div>
+      </div>
     </div>
 
-     <div id="feelAccordion" class="mb-3 p-2">
-
-      <!-- POSITIVE -->
-      <div class="mb-2">
-        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
-             data-bs-toggle="collapse" data-bs-target="#positiveContent" aria-expanded="false" aria-controls="positiveContent">
-          <span>POSITIVE</span>
-          <i data-lucide="chevron-down"></i>
-        </div>
-        <div id="positiveContent" class="collapse" data-bs-parent="#feelAccordion">
-          <div class="group-content px-3 py-2">
-            <button class="emotion-btn" data-value="happy"><i data-lucide="smile"></i><span>Happy</span></button>
-            <button class="emotion-btn" data-value="inlove"><i data-lucide="heart"></i><span>In Love</span></button>
-            <button class="emotion-btn" data-value="excited"><i data-lucide="sparkles"></i><span>Excited</span></button>
-            <button class="emotion-btn" data-value="grateful"><i data-lucide="sun"></i><span>Grateful</span></button>
-
-            <button class="emotion-btn" data-value="confident"><i data-lucide="sunglasses"></i><span>Confident</span></button>
-            <button class="emotion-btn" data-value="calm"><i data-lucide="feather"></i><span>Calm</span></button>
-            <button class="emotion-btn" data-value="relieved"><i data-lucide="wind"></i><span>Relieved</span></button>
-            <button class="emotion-btn" data-value="satisfied"><i data-lucide="smile-plus"></i><span>Satisfied</span></button>
-          </div>
+    <!-- NEUTRO -->
+    <div class="mb-2">
+      <div class="group-header d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse"
+        data-bs-target="#neutralContent" aria-expanded="false" aria-controls="neutralContent">
+        <span class="secondary-title" style="letter-spacing: 2px;">NEUTRO</span>
+        <i class="fi fi-rr-angle-circle-down ui-icon"></i>
+      </div>
+      <div id="neutralContent" class="collapse" data-bs-parent="#feelAccordion">
+        <div class="group-content px-3 py-2">
+          <button class="emotion-btn" data-value="indifferent">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-meh emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Indiferente</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="aphatic">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-expressionless emotion-icon"></i>
+              <span class="emotion-txt">Apático</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="bored">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-grin-tongue emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Entediado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="tired">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-sleeping emotion-icon"></i>
+              <span class="emotion-txt">Cansado</span>
+            </div>
+          </button>
         </div>
       </div>
-
-      <!-- NEUTRAL -->
-      <div class="mb-2">
-        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
-             data-bs-toggle="collapse" data-bs-target="#neutralContent" aria-expanded="false" aria-controls="neutralContent">
-          <span>NEUTRAL</span>
-          <i data-lucide="chevron-down"></i>
-        </div>
-        <div id="neutralContent" class="collapse" data-bs-parent="#feelAccordion">
-          <div class="group-content px-3 py-2">
-            <button class="emotion-btn" data-value="indifferent"><i data-lucide="meh"></i><span>Indifferent</span></button>
-            <button class="emotion-btn" data-value="uncertain"><i data-lucide="help-circle"></i><span>Uncertain</span></button>
-            <button class="emotion-btn" data-value="pensive"><i data-lucide="ellipsis"></i><span>Pensive</span></button>
-            <!-- placeholders will fill if needed -->
-          </div>
-        </div>
-      </div>
-
-      <!-- NEGATIVE -->
-      <div class="mb-2">
-        <div class="group-header d-flex align-items-center justify-content-between px-3 py-2"
-             data-bs-toggle="collapse" data-bs-target="#negativeContent" aria-expanded="false" aria-controls="negativeContent">
-          <span>NEGATIVE</span>
-          <i data-lucide="chevron-down"></i>
-        </div>
-        <div id="negativeContent" class="collapse" data-bs-parent="#feelAccordion">
-          <div class="group-content px-3 py-2">
-            <button class="emotion-btn" data-value="sad"><i data-lucide="frown"></i><span>Sad</span></button>
-            <button class="emotion-btn" data-value="angry"><i data-lucide="angry"></i><span>Angry</span></button>
-            <button class="emotion-btn" data-value="anxious"><i data-lucide="alert-triangle"></i><span>Anxious</span></button>
-            <button class="emotion-btn" data-value="disappointed"><i data-lucide="x-circle"></i><span>Disappointed</span></button>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- /accordion -->
-
-    <!-- SLIDER -->
-    <div class="slider-container text-center mt-3">
-      <label for="intensity" class="fw-semibold d-block mb-2">How strong is the feeling?</label>
-      <input type="range" id="intensity" class="form-range mx-auto" min="0" max="9" step="1" value="0" style="max-width: 360px;">
-      <div id="intensityLabel" class="slider-label mt-2">Muito leve</div>
     </div>
+
+    <!-- NEGATIVO -->
+    <!-- NEUTRO -->
+    <div class="mb-2">
+      <div class="group-header d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse"
+        data-bs-target="#negativeContent" aria-expanded="false" aria-controls="negativeContent">
+        <span class="secondary-title" style="letter-spacing: 2px;">NEGATIVO</span>
+        <i class="fi fi-rr-angle-circle-down ui-icon"></i>
+      </div>
+      <div id="negativeContent" class="collapse" data-bs-parent="#feelAccordion">
+        <div class="group-content px-3 py-2">
+          <button class="emotion-btn" data-value="sad">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-sad emotion-icon"></i>
+              <span class="emotion-txt">Triste</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="dissapointed">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-pensive emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 10px; letter-spacing: -1px;">Desapontado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="angry">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-angry emotion-icon"></i>
+              <span class="emotion-txt">Irritado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="annoyed">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-persevering emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Incomodado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="worried">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-anguished emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Preocupado</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="scared">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-frown emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Com medo</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="confused">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-confounded emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Confuso</span>
+            </div>
+          </button>
+          <button class="emotion-btn" data-value="anxious">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+             <i class="fi fi-rr-face-downcast-sweat emotion-icon"></i>
+              <span class="emotion-txt" style="font-size: 12px; letter-spacing: -1px;">Ansioso</span>
+            </div>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+  <!-- SLIDER -->
+  <div class="slider-container text-center mt-3 p-2">
+     <h3 class="secondary-title" style="font-size: 18px; letter-spacing: 2px;">Qual é a intensidade do sentimento?</h3>
+    <input type="range" id="intensity" class="form-range mx-auto" min="0" max="9" step="1" value="0"
+      style="max-width: 350px;">
+    <div id="intensityLabel" class="slider-label mt-2">Muito leve</div>
+  </div>
   </main>
+
+  <div class="container">
+    <div class="row text-center p-3">
+      <h3 class="secondary-title" style="font-size: 18px; letter-spacing: 2px;">Nota Rápida</h3>
+      <input type="text" placeholder="O que influenciou esse sentimento?" class="note-input input">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+        <a href="home.html" class="btn btn-save">SALVAR</a>
+    </div>
+  </div>
 
   <!-- Bootstrap (JS bundle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Seu JS -->
-  <script src="js/scripts.js"></script>
-
-    
+  <script src="/Mea-Project/js/script.js"></script>
 
 
-    <nav class="navbar fixed-bottom border-top pt-2 pb-2">
-        <div class="container d-flex justify-content-around">
-            <a href="/Mea-Project/home.html">
-                <img class="bar-btn" src="/Mea-Project/assets/img/Home.png" alt="">
-            </a>
-            <a href="/Mea-Project/free-canvas.html">
-                <img class="bar-btn" src="/Mea-Project/assets/img/Canvas-icon.png" alt="">
-            </a>
-            <a href="/Mea-Project/dashboard.html">
-                <img class="bar-btn" src="/Mea-Project/assets/img/Reports.png" alt="">
-            </a>
-            <a href="/Mea-Project/settings.html">
-                <img class="bar-btn" src="/Mea-Project/assets/img/Settings.png" alt="">
-            </a>
-        </div>
-    </nav>
+
+
+  <nav class="navbar fixed-bottom border-top pt-2 pb-2">
+    <div class="container d-flex justify-content-around">
+      <a href="/Mea-Project/home.html">
+        <img class="bar-btn" src="/Mea-Project/assets/img/Home.png" alt="">
+      </a>
+      <a href="/Mea-Project/free-canvas.html">
+        <img class="bar-btn" src="/Mea-Project/assets/img/Canvas-icon.png" alt="">
+      </a>
+      <a href="/Mea-Project/dashboard.html">
+        <img class="bar-btn" src="/Mea-Project/assets/img/Reports.png" alt="">
+      </a>
+      <a href="/Mea-Project/settings.html">
+        <img class="bar-btn" src="/Mea-Project/assets/img/Settings.png" alt="">
+      </a>
+    </div>
+  </nav>
 
 </body>
 
 </html>
-
-
-
-
-
