@@ -529,8 +529,7 @@ input[type="range"]::-moz-range-track {
   background-color: #b5ce9f;
   background-position: left center;
   border-radius: 2em;
-  transition: background-position 0.15s ease-in-out,
-    background-color 0.15s ease-in-out;
+  transition: background-position 0.15s ease-in-out, background-color 0.15s ease-in-out;
   border: none;
   outline: none;
   box-shadow: none;
@@ -570,17 +569,15 @@ input[type="range"]::-moz-range-track {
 }
 
 .configuration-orange {
-  background-color: #ff914b;
+   background-color: #ff914b;
   min-width: 300px;
-  height: 60px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px grey;
 }
 
 .configuration-green {
-  background-color: #b5ce9f;
+   background-color: #b5ce9f;
   min-width: 300px;
-  height: 60px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px grey;
 }
