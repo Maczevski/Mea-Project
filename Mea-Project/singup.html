@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mea - Sign Up</title>
-     <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/Mea-Project/css/style.css">
-     <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEA - Sign Up</title>
+    <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Mea-Project/css/style.css" />
+    <link rel="icon" href="/Mea-Project/assets/img/favicon.png" />
 </head>
+
 <body>
-    <div class="container">
-       
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="p-4"
+            style="background-color: var(--bege); border-radius: 16px; max-width: 400px; width: 100%; box-shadow: 0px 5px 15px rgba(0,0,0,0.1);">
+
+            <!-- LOGO -->
+            <div class="text-center mb-3">
+                <img src="/Mea-Project/assets/img/Mea-logo.png" alt="MEA" style="max-height: 60px;">
+                <p class="mt-2" style="font-family: 'Quicksand'; font-weight: 700; color: var(--dark-blue);">A space of
+                    your own</p>
+            </div>
+            <br>
+            <!-- SIGN UP TITLE -->
+            <h3 class="text-center secondary-title mb-4" style="letter-spacing: 8px;">CADASTRAR</h3>
+            <br>
+            <!-- SIGN UP FORM -->
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control note-input" style="padding: 10px;" placeholder="NOME COMPLETO" required>
+                </div>
+                <div class="mb-3">
+                    <input type="date" class="form-control note-input" style="padding: 10px;" placeholder="DATA DE NASCIMENTO" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control note-input" style="padding: 10px;" placeholder="E-MAIL" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control note-input" style="padding: 10px;" placeholder="SENHA" required>
+                </div>
+
+                <!-- SIGN UP BUTTON -->
+                <div class="d-grid">
+                    <a href="/Mea-Project/home.html" class="btn-save" style="font-size: 18px;">MEU ESPAÇO</a>
+                </div>
+
+                <!-- OR CONTINUE WITH - ajustado -->
+                <div class="text-center" style="margin-bottom: 5px;">
+                    <hr style="border-top: 1px solid #ccc;">
+                    <span style="color: var(--dark-blue); font-family: 'Quicksand'; font-weight: 700;">Ou continuar com</span>
+                    <hr style="border-top: 1px solid #ccc;">
+                </div>
+
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="#"><img src="/Mea-Project/assets/img/google.png" alt="Google" width="26"></a>
+                    <a href="#"><img src="/Mea-Project/assets/img/facebook.png" alt="Facebook" width="30"></a>
+                    <a href="#"><img src="/Mea-Project/assets/img/apple.png" alt="Apple" width="30"></a>
+                </div>
+        </div>
     </div>
-    
+
+    <script src="/Mea-Project/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
