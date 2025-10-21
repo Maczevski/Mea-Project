@@ -580,4 +580,157 @@ input[type="range"]::-moz-range-track {
   min-width: 300px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px grey;
+
+}
+
+.modal-content.language-modal {
+            background: #fff4e0;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header.language-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title.language-title {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 700;
+            color: #08364b;
+            font-size: 1.5rem;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-close:hover {
+            opacity: 1;
+            color: #ff914b;
+        }
+
+        select.language-select {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 600;
+            text-align: center;
+            border: 2px solid #ccc;
+            appearance: none;
+            background: white url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L10 12L14 8' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 15px center / 12px 12px;
+            cursor: pointer;
+        }
+
+        .btn.save-btn {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #fff;
+            background-color: #ff914b;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 30px;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn.save-btn:hover {
+            background-color: #b5ce9f;
+            color: #000;
+        }
+    
+        /* privacy-modal.css */
+
+/* Estilo para o modal de privacidade */
+.modal-content.privacy-modal {
+    background: #fff4e0;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.modal-header.privacy-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modal-title.privacy-title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: #08364b;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.btn-close:hover {
+    opacity: 1;
+    color: #ff914b;
+}
+
+.privacy-option {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #08364b;
+    margin-bottom: 0.3rem;
+}
+
+.form-check {
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn.save-btn-privacy {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #ff914b;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.btn.save-btn-privacy:hover {
+    background-color: #b5ce9f;
+    color: #000;
 }
