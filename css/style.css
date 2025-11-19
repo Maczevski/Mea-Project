@@ -331,6 +331,28 @@ a {
   stroke: var(--dark-blue);
 }
 
+.group-header i {
+  stroke: var(--dark-blue);
+}
+
+.positive-selection.active{
+  background-color: var(--coral);
+  stroke: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.neutral-selection.active{
+  background-color: var(--light-green);
+  stroke: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.negative-selection.active{
+  background-color: var(--light-blue);
+  stroke: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
 .group-content {
   margin-top: -10px;
   padding-top: 10px;
@@ -387,15 +409,7 @@ a {
 }
 
 /* Estado ativo */
-.emotion-btn.active {
-  background: var(--dark-blue);
-  color: var(--bege);
-  border-color: var(--dark-blue);
-}
 
-.emotion-btn.active i {
-  stroke: var(--bege);
-}
 
 /* Slider visual */
 .slider-container .form-range {
