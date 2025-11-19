@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mea - Dashboard</title>
-     <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/Mea-Project/css/style.css">
-     <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
-     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mea - Dashboard</title>
+  <link rel="stylesheet" href="/Mea-Project/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Mea-Project/css/style.css">
+  <link rel="icon" href="/Mea-Project/assets/img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/Mea-Project/css/all/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-       
+
+<div class="container">
+
+    <h2 class="title">MEA</h2>
+    <h1 class="dashboard">DASHBOARD</h1>
+
+    <div class="records-box" style="background-color: #b5ce9f;">
+        <span class="medal">🏆</span>
+        <span class="records-text">56 Records</span>
     </div>
-    
+
+    <h3 class="section-title">Emoções durante a semana</h3>
+
+    <div class="chart-container">
+    <canvas id="moodChart" width="300" height="200"></canvas>
+    <!-- EMOTICONS NO EIXO Y -->
+  <div class="y-icons">
+    <i class="fi fi-rr-grin-beam"></i>
+    <i class="fi fi-rr-smile"></i>
+    <i class="fi fi-rr-meh"></i>
+    <i class="fi fi-rr-frown"></i>
+    <i class="fi fi-rr-sad"></i>
+  </div>
+</div>
+<br>
+<h3 class="section-title">Registros por emoções</h3>
+    <canvas id="barChart" width="340" height="210"></canvas>
+
+</div>
+<br>
+<br><br>
+
+ <nav class="navbar fixed-bottom border-top pt-2 pb-2">
+        <div class="container d-flex justify-content-around">
+            <a href="/Mea-Project/home.html"> 
+                <img class="bar-btn" src="/Mea-Project/assets/img/Home.png" style="width: 30px; height:30px" alt="">
+            </a>
+            <a href="/Mea-Project/free-canvas.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Canvas-icon.png" style="width: 30px; height:30px" alt="">
+            </a>
+            <a href="/Mea-Project/dashboard.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Reports.png" style="width: 30px; height:30px" alt="">
+            </a>
+            <a href="/Mea-Project/settings.html">
+                <img class="bar-btn" src="/Mea-Project/assets/img/Settings.png" style="width: 30px; height:30px" alt="">
+            </a>
+        </div>
+    </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/Mea-Project/js/script.js"></script>
 </body>
 </html>

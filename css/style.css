@@ -748,3 +748,86 @@ input[type="range"]::-moz-range-track {
     background-color: #b5ce9f;
     color: #000;
 }
+
+/* dashboard*/
+
+.title {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 28px;
+    color: #1e3e3d;
+    font-weight: bold;
+}
+
+.dashboard {
+    margin: 5px 0 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e3e3d;
+    font-size: 20px;
+}
+
+.records-box {
+    background: #A7C67C;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    margin: 0 0 10px;
+    color: #1e3e3d;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chart-box {
+    background: #F2E0BC;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.chart {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.chart-container {
+    background: #fff4e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(8, 54, 75, 0.15);
+    margin-bottom: 30px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+.chart-container {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.y-icons {
+  position: absolute;
+  top: 15px;
+  left: -5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+  font-size: 18px;
+  color: #08364b;
+}
